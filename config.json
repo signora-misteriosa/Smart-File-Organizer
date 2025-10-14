@@ -1,0 +1,13 @@
+{
+    "categories": {
+      "Images": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff", ".svg"],
+      "Documents": [".pdf", ".docx", ".doc", ".txt", ".pptx", ".xlsx", ".csv"],
+      "Audio": [".mp3", ".wav", ".aac", ".flac", ".ogg"],
+      "Video": [".mp4", ".mov", ".avi", ".mkv"],
+      "Archives": [".zip", ".rar", ".7z", ".tar", ".gz"],
+      "Code": [".py", ".java", ".cpp", ".c", ".js", ".html", ".css"],
+      "Executables": [".exe", ".msi", ".bat"],
+      "Others": []
+    }
+  }
+  
