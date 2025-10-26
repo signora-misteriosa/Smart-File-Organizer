@@ -51,7 +51,7 @@ Example:
   "Documents": [".pdf", ".docx", ".txt"],
   "Archives": [".zip", ".rar", ".7z"]
 }
-
+</pre>
 GUI Interface
 ![GUI Screenshot](screenshots/gui.png)
 
@@ -63,7 +63,7 @@ After Organization
 ![After GUI](screenshots/guiafter.png)
 ![After Example](screenshots/exafter.png)
 
-Author: Eligia Raileanu
+Author: Eligia Raileanu.
 Developed as part of an internship practical project.
 Year: 2025
-</pre>
+
