@@ -4,9 +4,7 @@ Made a Python tool that automatically organizes your files into folders like Ima
 Basically, you run one command (or use a simple GUI) and your files are sorted.
 
 What it does:
-
 Sorts files by extension (automatically detects the type)
-
 Dry Run — see what would happen without actually changing anything
 Undo — revert the last organization if you messed up
 Configurable conflict handling (rename or skip)
@@ -14,7 +12,9 @@ GUI with Tkinter — if you don't wanna deal with terminal stuff
 Logs everything to .csv and .json — so you know exactly what got moved
 
 Installation:
+
 Clone the repo:
+
 clone https://github.com/Kurai-bit/Smart-File-Organizer.git
 cd Smart-File-Organizer
 
