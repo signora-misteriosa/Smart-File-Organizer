@@ -15,32 +15,25 @@ Logs everything to .csv and .json — so you know exactly what got moved
 Installation:
 Clone the repo:
 clone https://github.com/Kurai-bit/Smart-File-Organizer.git
-
 cd Smart-File-Organizer
 
 Usage (Command Line):
 -Organize a folder:
-
 python organizer.py <path_to_folder>
-
 -Preview changes (Dry Run):
-
 python organizer.py <path_to_folder> --dry-run
-
 -Undo last operation:
-
 python organizer.py <path_to_folder> --undo
+
 
 Handle conflicts:
 python organizer.py <path_to_folder> --conflict-mode skip
-
 python organizer.py <path_to_folder> --conflict-mode rename
 
 
 GUI Mode:
 Run the graphical interface:
 python gui.py
-
 
 The GUI allows you to select a folder, choose operation mode (Normal / Dry Run / Undo), run organization visually and view logs in real time.
 
