@@ -52,15 +52,26 @@ Example:
   "Archives": [".zip", ".rar", ".7z"]
 }
 </pre>
+
+
 GUI Interface
+
 ![GUI Screenshot](screenshots/gui.png)
 
+
+
 Before Organization
+
 ![Before GUI](screenshots/guibefore.png)
+
 ![Before Example](screenshots/exbef.png)
 
+
+
 After Organization
+
 ![After GUI](screenshots/guiafter.png)
+
 ![After Example](screenshots/exafter.png)
 
 Author: Eligia Raileanu.
