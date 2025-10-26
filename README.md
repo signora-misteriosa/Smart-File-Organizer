@@ -1,3 +1,4 @@
+<pre>
 Smart File Organizer
 Made a Python tool that automatically organizes your files into folders like Images, Documents, Archives, etc.
 Basically, you run one command (or use a simple GUI) and your files are sorted.
@@ -66,3 +67,4 @@ After Organization
 Author: Eligia Raileanu
 Developed as part of an internship practical project.
 Year: 2025
+</pre>
