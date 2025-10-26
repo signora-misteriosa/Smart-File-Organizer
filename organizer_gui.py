@@ -13,34 +13,28 @@ class SmartFileOrganizerGUI:
         self.path_var = tk.StringVar()
         self.conflict_mode = tk.StringVar(value="rename")
 
-        # ====== HEADER ======
         tk.Label(root, text="📂 Smart File Organizer", font=("Segoe UI", 16, "bold")).pack(pady=10)
 
-        # ====== PATH SELECTOR ======
         frame_path = tk.Frame(root)
         frame_path.pack(pady=10, padx=10, fill="x")
         tk.Entry(frame_path, textvariable=self.path_var, width=60).pack(side="left", padx=5)
-        tk.Button(frame_path, text="Alege folder", command=self.browse_folder, bg="#0078D7", fg="white").pack(side="left")
+        tk.Button(frame_path, text="Select folder", command=self.browse_folder, bg="#0078D7", fg="white").pack(side="left")
 
-        # ====== CONFLICT MODE ======
         frame_mode = tk.Frame(root)
         frame_mode.pack(pady=5)
-        tk.Label(frame_mode, text="Mod conflict:", font=("Segoe UI", 10)).pack(side="left", padx=5)
+        tk.Label(frame_mode, text="Conflict mode:", font=("Segoe UI", 10)).pack(side="left", padx=5)
         ttk.Combobox(frame_mode, textvariable=self.conflict_mode, values=["rename", "skip"], width=10, state="readonly").pack(side="left")
 
-        # ====== BUTTONS ======
         frame_buttons = tk.Frame(root)
         frame_buttons.pack(pady=15)
-        tk.Button(frame_buttons, text="Organizează", command=self.run_organize, bg="#28A745", fg="white", width=15).grid(row=0, column=0, padx=5)
+        tk.Button(frame_buttons, text="Organize", command=self.run_organize, bg="#28A745", fg="white", width=15).grid(row=0, column=0, padx=5)
         tk.Button(frame_buttons, text="Dry Run", command=self.run_dry_run, bg="#FFC107", fg="black", width=15).grid(row=0, column=1, padx=5)
         tk.Button(frame_buttons, text="Undo", command=self.run_undo, bg="#DC3545", fg="white", width=15).grid(row=0, column=2, padx=5)
 
-        # ====== OUTPUT LOG ======
-        tk.Label(root, text="Jurnal operații:", font=("Segoe UI", 10, "bold")).pack(pady=(10, 0))
+        tk.Label(root, text="Operations log:", font=("Segoe UI", 10, "bold")).pack(pady=(10, 0))
         self.output_text = scrolledtext.ScrolledText(root, width=80, height=15, font=("Consolas", 9))
         self.output_text.pack(padx=10, pady=5)
 
-    # ====== FUNCȚII ======
     def browse_folder(self):
         folder = filedialog.askdirectory()
         if folder:
@@ -48,7 +42,7 @@ class SmartFileOrganizerGUI:
 
     def run_command(self, args):
         if not self.path_var.get():
-            messagebox.showwarning("Atenție", "Selectează mai întâi un folder.")
+            messagebox.showwarning("Warning", "Select a folder first.")
             return
 
         command = ["python", "organizer.py", self.path_var.get()] + args
@@ -62,9 +56,9 @@ class SmartFileOrganizerGUI:
 
         process.wait()
         if process.returncode == 0:
-            messagebox.showinfo("Succes", "Operația s-a finalizat cu succes!")
+            messagebox.showinfo("Success", "The operation was successfully completed.!")
         else:
-            messagebox.showerror("Eroare", "A apărut o problemă la executarea scriptului.")
+            messagebox.showerror("Error", "There was a problem executing the script.")
 
     def run_organize(self):
         mode = ["--conflict-mode", self.conflict_mode.get()]
@@ -82,3 +76,6 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = SmartFileOrganizerGUI(root)
     root.mainloop()
+
+
+

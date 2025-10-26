@@ -1,23 +1,69 @@
-# Smart file organizer
+Smart File Organizer
+Made a Python tool that automatically organizes your files into folders like Images, Documents, Archives, etc.
+Basically, you run one command (or use a simple GUI) and your files are sorted.
 
-## Description
-Automatically sort files in a folder into subfolders based on extension or rules.
+What it does:
+Sorts files by extension (automatically detects the type)
+Dry Run — see what would happen without actually changing anything
+Undo — revert the last organization if you messed up
+Configurable conflict handling (rename or skip)
+GUI with Tkinter — if you don't wanna deal with terminal stuff
+Logs everything to .csv and .json — so you know exactly what got moved
 
-## Getting Started
-1. Clone this repository or download the files.
-2. Install required packages if necessary.
+Installation:
+Clone the repo:
+clone https://github.com/Kurai-bit/Smart-File-Organizer.git
+cd Smart-File-Organizer
 
-Keep in mind that the code must be written in OOP.
+Usage (Command Line):
+-Organize a folder:
+python organizer.py <path_to_folder>
 
-## Tasks
-- Understand how file paths work. Write code to scan files in a folder.
-- Classify files by extension (e.g., .jpg, .pdf, etc.).
-- Create destination folders and move files using `shutil.move()`.
-- Add logging of moved files (source, destination, time).
-- Add menu to let user choose which folder to organize.
-- Add undo function by keeping a “moved files” history.
-- Add a GUI using tkinter: folder selection and start/stop button.
-- Add error handling (conflicting names, permission issues).
-- Final testing. Create README with instructions and screenshots. Submit as Git repo.
+-Preview changes (Dry Run):
+python organizer.py <path_to_folder> --dry-run
 
-## Estimated time to work 2 weeks
+-Undo last operation:
+python organizer.py <path_to_folder> --undo
+
+Handle conflicts:
+python organizer.py <path_to_folder> --conflict-mode skip
+python organizer.py <path_to_folder> --conflict-mode rename
+
+
+GUI Mode:
+Run the graphical interface:
+python gui.py
+
+
+The GUI allows you to select a folder, choose operation mode (Normal / Dry Run / Undo), run organization visually and view logs in real time.
+
+
+Log Files:
+organizer_log.csv — records timestamp, source, and destination for each move
+organizer_undo.json — stores data needed to revert the last operation
+
+
+Configuration:
+You can edit config.json to customize which file extensions belong to each category.
+Example:
+{
+  "Images": [".jpg", ".jpeg", ".png"],
+  "Documents": [".pdf", ".docx", ".txt"],
+  "Archives": [".zip", ".rar", ".7z"]
+}
+
+GUI Interface
+![GUI Screenshot](screenshots/gui.png)
+
+Before Organization
+![Before GUI](screenshots/guibefore.png)
+![Before Example](screenshots/exbef.png)
+
+After Organization
+![After GUI](screenshots/guiafter.png)
+![After Example](screenshots/exafter.png)
+
+
+Author: Eligia Raileanu
+Developed as part of an internship practical project.
+Year: 2025
